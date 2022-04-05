@@ -1,0 +1,1415 @@
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300&display=swap');
+
+:root {
+    --color: rgb(8, 117, 176);
+    --tron: rgb(57, 173, 235);
+    --white: #fff;
+    --bg-slider-text: rgba(255, 255, 255, .6);
+    --color-font: #222;
+    --border: rgb(217, 228, 252);
+    --bg-phu: rgba(0, 0, 0, .5);
+    --phone: rgb(226, 9, 9);
+    --bg-trangcon: rgb(235, 235, 235);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+html {
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+    font-family: 'Work Sans', sans-serif;
+    overflow-x: hidden;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+/* Header strat */
+header {
+    display: flex;
+    justify-content: space-between;
+    height: 6.4rem;
+    align-items: center;
+    background: linear-gradient(45deg, var(--tron), var(--color));
+    padding: 0 7.2rem;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 100;
+}
+
+header.anima {
+    animation: show .4s ease-in;
+}
+
+@keyframes show {
+    0% {
+        top: -6.4rem;
+        opacity: 0;
+    }
+
+    100% {
+        top: 0;
+        opacity: 1;
+    }
+}
+
+header .logo {
+    width: 10rem;
+    z-index: 100;
+}
+
+header .logo img {
+    width: 100%;
+}
+
+#menu {
+    font-size: 2.5rem;
+    padding: .5rem 1rem;
+    border: .1rem solid var(--white);
+    color: var(--white);
+    border-radius: .3rem;
+    cursor: pointer;
+    display: none;
+    z-index: 100;
+}
+
+.header--navbar {
+    list-style: none;
+    display: flex;
+}
+
+.header--navbar__li {
+    position: relative;
+}
+
+.header--navbar__link::after {
+    content: "";
+    width: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -.4rem;
+    height: .2rem;
+    display: block;
+    background-color: var(--white);
+    position: absolute;
+    transition: all 0.3s ease-in;
+}
+
+.header--navbar__link:hover:after {
+    width: 80%;
+}
+
+.header--navbar__link {
+    font-size: 1.6rem;
+    color: var(--white);
+    padding: 0 .8rem;
+    margin: 0 1.2rem;
+}
+
+/* Header End */
+
+/* Slider start */
+.sliders {
+    margin-top: 6.4rem;
+}
+
+.sliders--container {}
+
+.sliders--container__content {}
+
+.sliders--content__box {}
+
+.sliders--box__item {
+    width: 100%;
+    position: relative;
+
+}
+
+
+.sliders--box__item img {
+    width: 100%;
+}
+
+.slider--box__text {
+    position: absolute;
+    bottom: 1.2rem;
+    left: 0;
+    background-color: var(--bg-slider-text);
+    padding: 1.6rem;
+    max-width: 40rem;
+}
+
+.slider--text__para {
+    font-size: 1.8rem;
+    line-height: 1.6;
+    color: var(--color-font);
+    text-transform: capitalize;
+}
+
+/* Slider end */
+
+/* Giá trị mang lại start */
+.back {
+    background-image: url('https://detec.vn/wp-content/uploads/2020/12/bg-value-scaled.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.values {
+    padding: 2.6rem 0;
+}
+
+.heading {
+    font-size: 4rem;
+    text-align: center;
+    display: block;
+    text-transform: uppercase;
+    padding: 1.6rem 0;
+    color: var(--color);
+    position: relative;
+    margin-bottom: 3.6rem;
+}
+
+.heading::after {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    content: "";
+    background-color: var(--color);
+    width: 20%;
+    height: .3rem;
+    border-radius: 50%;
+
+}
+
+.values--item {
+    margin-bottom: 1.6rem;
+    padding: 1.6rem;
+}
+
+.values--item__img {
+    width: 8rem;
+    margin: 0 auto;
+    padding-top: 2.4rem;
+}
+
+.values--item__img img {
+    width: 100%;
+}
+
+.values--item__h2 {
+    font-size: 2.5rem;
+    color: var(--color-font);
+    padding: 1.6rem 0;
+    text-align: center;
+    font-weight: 600;
+    text-transform: capitalize;
+}
+
+.values--item__p {
+    font-size: 1.6rem;
+    color: var(--color-font);
+    line-height: 1.6;
+    text-align: center;
+    padding-bottom: 1.6rem;
+}
+
+/* Giá trị mang lại end */
+
+/* Các khoá học start */
+.courses {
+    padding: 2.6rem 0;
+}
+
+.courses--row {
+    border: .1rem solid var(--border);
+    box-shadow: .2rem .2rem .4rem var(--border);
+    border-radius: .4rem;
+    margin-bottom: 4.2rem;
+}
+
+.courses--col {
+    border-bottom: .1rem solid var(--border);
+    border-right: .1rem solid var(--border);
+}
+
+.courses--item {
+    overflow: hidden;
+    position: relative;
+    border-radius: .4rem;
+    margin: 1.6rem 0;
+}
+
+.courses--item__link {
+    width: 100%;
+    display: block;
+}
+
+.courses--item__link img {
+    width: 100%;
+    transition: all .3s ease-in;
+    border-radius: .4rem;
+}
+
+.courses--item__link:hover img {
+    transform: scale(1.2);
+}
+
+.courses--item__phu {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--bg-phu);
+    visibility: hidden;
+    opacity: 0;
+    transition: all .2s ease-in;
+}
+
+.courses--item__link:hover .courses--item__phu {
+    visibility: unset;
+    opacity: 1;
+}
+
+.courses--item__link:hover .courses--phu--p {
+    transform: scale(1);
+}
+
+.courses--phu--p {
+    transform: scale(1.6);
+    color: var(--white);
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    padding-left: 1.6rem;
+    padding-right: 1.6rem;
+}
+
+.courses--phu--p1 {
+    padding-top: 1.6rem;
+    padding-bottom: 1.6rem;
+    background-color: var(--color-font);
+    text-align: center;
+    transition: all .2s ease-in;
+    margin-top: 4.2rem;
+    font-size: 1.8rem;
+    text-transform: capitalize;
+}
+
+.courses--phu--p2 {
+    padding-top: .8rem;
+    font-style: italic;
+    font-size: 1.6rem;
+    transition: all .3s ease-in;
+}
+
+/* Các khoá học end */
+
+
+/* Các giảng viên start */
+.staffs {
+    padding: 2.6rem 0;
+}
+
+.staffs--item {
+    border: .1rem solid var(--border);
+    border-radius: .4rem;
+    margin-bottom: 3.2rem;
+    transition: all .2s ease-in;
+    background-color: var(--white);
+}
+
+.staffs--item:hover {
+    box-shadow: .2rem .2rem .4rem var(--bg-phu);
+}
+
+.staffs--item__link {}
+
+.staffs--link__img {
+    width: 18rem;
+    height: 18rem;
+    margin: 1.6rem auto .8rem auto;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.staffs--link__img img {
+    width: 100%;
+    height: 100%;
+}
+
+.staffs--link__phu {
+    padding: 1.6rem;
+    text-align: center;
+}
+
+.staffs--phu__h3 {
+    font-size: 2.2rem;
+    font-weight: 600;
+    margin-bottom: 1.6rem;
+    color: var(--color-font);
+    text-transform: capitalize;
+}
+
+.staffs--phu__p {
+    font-size: 1.6rem;
+    color: var(--color-font);
+    font-weight: 500;
+    margin-bottom: 1.6rem;
+}
+
+.btn {
+    padding: 1.2rem 1.6rem;
+    width: 100%;
+    font-size: 1.6rem;
+    background-color: var(--color-font);
+    opacity: .9;
+    color: var(--white);
+    border-radius: .4rem;
+    border: .1rem solid var(--color-font);
+    cursor: pointer;
+}
+
+.btn:hover {
+    transform: scale(1.05);
+    box-shadow: .2rem .2rem .4rem var(--bg-phu);
+    opacity: 1;
+}
+
+.btn:active {
+    transform: scale(1);
+    box-shadow: none;
+    opacity: .9;
+}
+
+.staffs-most {
+    margin: .8rem auto;
+    max-width: 20rem;
+}
+
+.staffs-most a {
+    width: 100%;
+    text-align: center;
+    display: block;
+    margin-bottom: 3.2rem;
+    border-radius: .8rem;
+}
+
+.staffs-most a i {
+    font-size: 1.6rem;
+    position: relative;
+    top: .2rem;
+    left: .2rem;
+    transition: all .1s ease-in;
+}
+
+.staffs-most a:hover i {
+    left: 1rem;
+}
+
+.staffs-most a:active i {
+    left: .2rem;
+}
+
+/* Các giảng viên end */
+
+/* Đánh giá của học viên start */
+.evaluate {
+    padding: 2.6rem 0;
+    margin-bottom: 1.6rem;
+
+}
+
+.evaluate--item {
+    margin: 1.2rem 0;
+    position: relative;
+    border: .1rem solid var(--border);
+    padding: 1.2rem;
+    border-radius: .4rem;
+}
+
+
+.evaluate--item__img {
+    overflow: hidden;
+    max-width: 15rem;
+}
+
+.evaluate--item__img img {
+    width: 100%;
+    border-radius: .8rem;
+}
+
+.evaluate--item__h4 {
+    font-size: 1.8rem;
+    color: var(--color-font);
+    text-transform: capitalize;
+    font-weight: 600;
+    padding: .8rem 0 1.2rem 0;
+}
+
+.evaluate--item__p {
+    font-size: 1.6rem;
+    color: var(--color-font);
+    line-height: 1.6;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+}
+
+.evaluate--item__time {
+    font-size: 1.4rem;
+    color: var(--color-font);
+    margin-bottom: .8rem;
+}
+
+.evaluate--item__time i {
+    font-size: 1.6rem;
+    margin-right: .4rem;
+}
+
+.evaluate-row:hover .slick-prev:before,
+.evaluate-row:hover .slick-next:before {
+    visibility: unset;
+    opacity: 1;
+}
+
+.evaluate-row {
+    margin-bottom: 3.2rem;
+}
+
+.evaluate-row .slick-prev {
+    left: -3.6rem;
+}
+
+.evaluate-row .slick-prev:before,
+.evaluate-row .slick-next:before {
+    font-size: 3.5rem;
+    color: var(--color);
+    visibility: hidden;
+    opacity: 0;
+}
+
+.evaluate-row .slick-dots li button:before {
+    font-size: 1.5rem;
+    margin-top: .8rem;
+}
+
+.evaluate--link {
+    font-size: 2rem;
+    padding: 1.6rem;
+    display: flex;
+    justify-content: end;
+    color: var(--color-font);
+    font-weight: 600;
+}
+
+.evaluate--link:hover i {
+    left: 1.6rem;
+}
+
+.evaluate--link:hover {
+    color: var(--color);
+}
+
+.evaluate--link:active i {
+    left: .4rem;
+}
+
+.evaluate--link i {
+    font-size: 1.6rem;
+    position: relative;
+    left: .4rem;
+    transition: all .2s ease-in;
+    top: .5rem;
+}
+
+/* Đánh giá của học viên end */
+
+/* Tin tức trong nganh đa khoa  start*/
+.news {
+    padding: 2.6rem 0;
+}
+
+.news--left {
+    padding-right: 2.4rem;
+}
+
+.news--container {}
+
+.news--item {
+    /* background-color: var(--white); */
+}
+
+.news--item__img {}
+
+.news--item__img img {
+    width: 98%;
+    transition: all .2s ease-in;
+}
+
+.news--item__img img:hover {
+    transform: scale(1.1);
+}
+
+.news--content {
+    padding: 1.6rem;
+}
+
+.news--content__link {
+    font-size: 2rem;
+    color: var(--color-font);
+    margin-bottom: 1.2rem;
+    text-transform: capitalize;
+    display: block;
+    font-weight: 600;
+    transition: all .2s ease;
+}
+
+.news--content__link:hover {
+    color: var(--color);
+}
+
+.news--content__icon {
+    display: flex;
+    margin-bottom: 1.6rem;
+}
+
+.news--content__para {
+    font-size: 1.6rem;
+    line-height: 1.6;
+    color: var(--color-font);
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+}
+
+.news--icon__time {
+    font-size: 1.6rem;
+    color: var(--color-font);
+    margin-right: 2.4rem;
+}
+
+.news--icon__time i {
+    font-size: 1.8rem;
+    margin-right: .8rem;
+}
+
+.news--icon__cn {
+    font-size: 1.6rem;
+    color: var(--color-font);
+}
+
+.news--icon__cn:hover {
+    color: var(--color);
+}
+
+.news--icon__cn i {
+    font-size: 1.8rem;
+    margin-right: .8rem;
+}
+
+.news--right__img {
+    width: 100%;
+}
+
+.news--right__img img {
+    width: 100%;
+}
+
+.news--right__link {
+    font-size: 1.8rem;
+    color: var(--color-font);
+    margin-top: .4rem;
+    margin-bottom: 1.2rem;
+    display: block;
+    font-weight: 600;
+}
+
+.news--right__link:hover {
+    color: var(--color);
+}
+
+.news--right__icon {
+    display: flex;
+}
+
+.news--right__time {
+    font-size: 1.6rem;
+    color: var(--color-font);
+    margin-right: 2.4rem;
+}
+
+.news--right__time i {
+    font-size: 1.8rem;
+    margin-right: .8rem;
+}
+
+.news--right__cn {
+    font-size: 1.6rem;
+    color: var(--color-font);
+}
+
+.news--right__cn:hover {
+    color: var(--color);
+}
+
+.news--right__cn i {
+    font-size: 1.8rem;
+    margin-right: .8rem;
+}
+
+.news--right__para {
+    font-size: 1.6rem;
+    color: var(--color-font);
+    line-height: 1.6;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+}
+
+.new--right__row {
+    margin-bottom: 2.4rem;
+}
+
+
+/* Tin tức trong ngành đa khoa start*/
+
+/* Chân trang */
+.footer {
+    padding: 2.6rem;
+    border-top: .1rem solid var(--color);
+}
+
+.footer--logo {
+    border-radius: 1.6rem;
+    display: block;
+    padding: .8rem;
+}
+
+.footer--logo img {
+    width: 100%;
+}
+
+.footer-right {
+    background-color: var(--color);
+    padding: 1.6rem;
+}
+
+.footer--p {
+    font-size: 2.2rem;
+    color: var(--white);
+    text-align: center;
+    text-transform: capitalize;
+    margin-bottom: 1.6rem;
+    position: relative;
+}
+
+.footer--p::after {
+    content: "";
+    width: 15%;
+    height: .2rem;
+    background-color: var(--color-font);
+    position: absolute;
+    bottom: -.8rem;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.footer--para {
+    font-size: 1.6rem;
+    text-align: center;
+    color: var(--white);
+    margin-bottom: .8rem;
+}
+
+.footer--link {
+    font-size: 2.2rem;
+    font-weight: 600;
+    color: var(--phone);
+    text-align: center;
+    display: block;
+}
+
+.footer-col {
+    margin-bottom: 2.4rem;
+}
+
+
+/* Tang con start */
+/* Khoá học start*/
+.course-subpage {
+    padding: 2.6rem 0;
+    margin-top: 6.4rem;
+}
+
+.course-subpage--container {}
+
+.subpage__heading {
+    font-size: 4rem;
+    color: var(--color);
+    text-align: center;
+    padding: 1.6rem 0;
+    text-transform: uppercase;
+}
+
+.subpage__heading--p {
+    background: url("https://1zcdn.zland.vn/tpl/tpl/388/images/bg-title.png") no-repeat center center;
+    margin: .8rem 0 2rem 0;
+    height: 1rem;
+    display: block;
+}
+
+.subpage-container {
+    background-color: var(--bg-trangcon);
+    padding: 1.6rem;
+    margin-bottom: 2.4rem;
+}
+
+.subpage-container__img {
+    display: block;
+    overflow: hidden;
+}
+
+.subpage-container__img img:hover {
+    transform: scale(1.3);
+}
+
+.subpage-container__img img {
+    object-fit: cover;
+    object-position: top;
+    width: 100%;
+    transition: all .3s ease-in;
+}
+
+.subpage-container__item {}
+
+.subpage-container--item__link {
+    font-size: 1.8rem;
+    color: var(--color);
+    margin-bottom: 1.6rem;
+    text-transform: uppercase;
+    font-weight: 600;
+    display: block;
+    padding-top: 2.4rem;
+}
+
+.subpage-container--item__p span {
+    font-size: 1.8rem;
+    text-transform: uppercase;
+}
+
+.subpage-container--item__p {
+    font-size: 1.6rem;
+    color: var(--color-font);
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    line-height: 1.6;
+
+}
+
+.course-subpage--page {
+    display: flex;
+    justify-content: end;
+}
+
+.course-subpage--btn {
+    font-size: 1.8rem;
+    padding: 1.6rem;
+}
+
+/* Khoá học end */
+
+/* Trang con Giảng viên start */
+.staff-subpage {
+    padding: 2.6rem 0;
+    margin-top: 6.4rem;
+}
+
+.staff-subpage--container {}
+
+.staff-subpage--container__link {
+    display: block;
+    padding: 2.4rem;
+}
+
+.staff-subpage--link__img {
+    max-width: 15rem;
+    max-height: 15rem;
+    border-radius: 50%;
+    overflow: hidden;
+    margin: 0 auto;
+}
+
+.staff-subpage--link__img img {
+    object-fit: cover;
+    object-position: top;
+    width: 100%;
+}
+
+.staff-subpage--item {
+    background-color: var(--white);
+    border: .1rem solid var(--bg-trangcon);
+    border-radius: .4rem;
+    transition: all .2s ease-in;
+    margin-bottom: 2.4rem;
+
+}
+
+.staff-subpage--item:hover {
+    box-shadow: 0 0 .4rem var(--bg-phu);
+}
+
+.staff-subpage--link__h4 {
+    font-size: 1.8rem;
+    font-weight: 600;
+    text-align: center;
+    text-transform: capitalize;
+    margin-bottom: 1.2rem;
+    color: var(--color-font);
+    margin-top: 1.6rem;
+}
+
+.staff-subpage--link__p {
+    font-size: 1.4rem;
+    color: var(--color-font);
+    font-weight: 400;
+    text-align: center;
+}
+
+.staff-subpage--link__btn {
+    font-size: 1.6rem;
+    color: var(--white);
+    background-color: var(--color-font);
+    padding: .8rem 1.6rem;
+    max-width: 70%;
+    text-align: center;
+    margin: 1.6rem auto;
+    border-radius: .4rem;
+    text-transform: capitalize;
+}
+
+/* Trang con Giảng viên end */
+
+
+/* Trang con đăng ký start */
+.register-course {
+    padding: 2.6rem 0;
+    margin-top: 6.4rem;
+}
+
+.register-course--form {
+    padding: 1.6rem;
+    border: .1rem solid var(--bg-trangcon);
+    border-radius: .4rem;
+}
+
+
+.register-course--form .form-group {
+    display: block;
+    margin-bottom: 2.4rem;
+}
+
+.register-course--form .form-group.validate .form-input {
+    border: .1rem solid var(--phone);
+}
+
+.register-course--form .form-group .form-select,
+.register-course--form .form-group .form-input {
+    font-size: 1.6rem;
+    padding: .8rem 1.6rem;
+    width: 100%;
+    border: .1rem solid var(--bg-trangcon);
+    outline-color: var(--tron);
+}
+
+.form-btn {
+    font-size: 1.6rem;
+    padding: 1.2rem 2.4rem;
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 1.6rem;
+    background-color: var(--white);
+    border: .1rem solid var(--color);
+    border-radius: .4rem;
+    font-weight: 600;
+    color: var(--color-font);
+    cursor: pointer;
+}
+
+.register-course--form .form-group.validate .form-message {
+    color: var(--phone);
+}
+
+.form-message {
+    font-size: 1.6rem;
+    margin-top: .8rem;
+    text-transform: capitalize;
+    color: var(--color-font);
+}
+
+/* Trang con đăng ký end */
+
+/* Trang con liên hệ start */
+.contact-subpage {
+    padding: 1.6rem 0;
+    margin-top: 6.4rem;
+}
+
+/* Trang con liên hệ end */
+
+
+/* Trang chi tiết khoá học start */
+.chiTiet-course {
+    padding: 2.6rem;
+    margin-top: 6.4rem;
+}
+
+.chiTiet-course .subpage__heading {
+    font-size: 3rem;
+}
+
+.chiTiet-course .subpage__heading--p {
+    height: .8rem;
+}
+
+.chiTiet-course--item {
+    border: .1rem solid var(--border);
+    padding: 1.6rem;
+}
+
+.chiTiet-course--item__p {
+    display: block;
+    font-size: 1.6rem;
+    color: var(--color-font);
+    line-height: 1.6;
+    margin-bottom: 1.6rem;
+}
+
+.chiTiet-course--item__img {
+    margin-bottom: 1.6rem;
+}
+
+.chiTiet-course--item__img img {
+    object-fit: cover;
+    object-position: top;
+    width: 100%;
+    margin-top: 1.6rem;
+    margin-bottom: 1.6rem;
+}
+
+.chiTiet-course--item__div {}
+
+.chiTiet-course--div__h4 {
+    font-size: 2.4rem;
+    color: var(--color);
+    text-transform: capitalize;
+    display: block;
+    margin-bottom: .8rem;
+    margin-top: 1.6rem;
+}
+
+.chiTiet-course--div__p {
+    font-size: 1.6rem;
+    color: var(--color-font);
+    line-height: 1.6;
+}
+
+.chiTiet-course--div__p i {
+    font-size: 1.6rem;
+    padding: 0 1.2rem;
+    font-weight: 600;
+    color: var(--color);
+}
+
+.chiTiet-course-right--container__h4 {
+    font-size: 2rem;
+    background-color: var(--color);
+    color: var(--white);
+    padding: .8rem 1.6rem;
+    text-align: center;
+    text-transform: capitalize;
+}
+
+.chiTiet-course-right--container__p {
+    font-size: 1.6rem;
+    color: var(--color-font);
+    line-height: 1.6;
+    margin-top: 1.6rem;
+}
+
+.chiTiet-course-right--form {
+    padding: 1.6rem 0;
+    display: block;
+}
+
+.chiTiet-course-right--form .form-group {
+    margin-bottom: 1.6rem;
+}
+
+.chiTiet-course-right--form .form-btn {
+    font-size: 1.6rem;
+    padding: .8rem 4.5rem;
+    color: var(--color-font);
+    margin-bottom: 1.6rem;
+}
+
+.chiTiet-course-right--form .form-input {
+    padding: .8rem 1.6rem;
+    width: 100%;
+    font-size: 1.6rem;
+    color: var(--color-font);
+    outline-color: var(--color);
+    border: .1rem solid var(--bg-phu);
+}
+
+.chiTiet-course-right--container__item {
+    padding: 1.6rem 0;
+    border-bottom: .1rem dashed var(--bg-phu);
+}
+
+.chiTiet-course-right--item__img {
+    width: 100%;
+}
+
+.chiTiet-course-right--item__img img {
+    object-fit: cover;
+    object-position: top;
+    width: 100%;
+}
+
+.chiTiet-course-right--item__link {
+    font-size: 1.6rem;
+    color: var(--color-font);
+    text-transform: uppercase;
+    line-height: 1.6;
+    font-weight: 600;
+    display: block;
+    transition: all .2s ease-in;
+}
+
+.chiTiet-course-right--item__link:hover {
+    color: var(--color);
+}
+
+.border-none {
+    border: none;
+}
+
+/* Trang chi tiết khoá học end */
+
+/* Trang chi tiết giảng viên start*/
+.chiTiet-staff {
+    padding: 2.6rem 0;
+    margin-top: 6.4rem;
+}
+
+.chiTiet-staff--container {
+    border: .1rem solid var(--border);
+}
+
+.chiTiet-staff--container__item {
+    padding: 1.6rem;
+}
+
+.chiTiet-staff--item {}
+
+.chiTiet-staff--item__img {
+    width: 100%;
+}
+
+.chiTiet-staff--item__img img {
+    width: 100%;
+    object-fit: cover;
+    object-position: top;
+}
+
+.chiTiet-staff--item__h4 {
+    font-size: 2rem;
+    font-weight: 600;
+    color: var(--color-font);
+    padding: .8rem 0;
+}
+
+.chiTiet-staff--item__p {
+    font-size: 1.6rem;
+    color: var(--color-font);
+    margin-bottom: 1.6rem;
+}
+
+.chiTiet-staff--item__p span {
+    font-weight: 600;
+    margin-right: .8rem;
+    text-transform: capitalize;
+}
+
+.chiTiet-staff-right--col {
+    padding: 1.6rem;
+}
+
+.chiTiet-staff-right {
+    border-left: .1rem solid var(--border);
+    padding: 0 1.6rem;
+}
+
+.chiTiet-staff-right__h5 {
+    font-size: 2rem;
+    color: var(--color-font);
+    font-weight: 500;
+    margin-bottom: 1.6rem;
+}
+
+.chiTiet-staff-right__p {
+    font-size: 1.6rem;
+    color: var(--color-font);
+    margin-bottom: 1.6rem;
+    line-height: 1.6;
+}
+
+.chiTiet-staff--content {}
+
+.chiTiet-staff--content__item {
+    margin: 1.6rem 0;
+    border: .1rem solid var(--border);
+    padding: 1.6rem;
+}
+
+.chiTiet-staff--content__chuyenmon {
+    border-bottom: .1rem solid var(--border);
+    padding-bottom: 1.6rem;
+}
+
+.chiTiet-staff--chuyenmon__h4 {
+    font-size: 1.8rem;
+    color: var(--color-font);
+    font-weight: 600;
+    margin-bottom: 1.6rem;
+    text-transform: uppercase;
+}
+
+.chiTiet-staff--chuyenmon__p {
+    font-size: 1.6rem;
+    color: var(--color-font);
+    line-height: 1.6;
+}
+
+.chiTiet-staff--khoaHoc__h4 {
+    margin-top: 1.6rem;
+}
+
+.chiTiet-staff--content__giangVien {}
+
+.chiTiet-staff--giangVien__h4 {
+    font-size: 2.2rem;
+    color: var(--color-font);
+    border-bottom: .1rem solid var(--border);
+    padding-bottom: 1.6rem;
+    text-transform: capitalize;
+}
+
+.chiTiet-staff--content__row {
+    padding: 1.6rem 0;
+}
+
+.chiTiet-staff--content__img {
+    width: 100%;
+}
+
+.chiTiet-staff--content__img img {
+    width: 100%;
+    object-fit: cover;
+    object-position: top;
+    border-radius: 50%;
+}
+
+.chiTiet-staff--content__link {
+    font-size: 1.6rem;
+    color: var(--color-font);
+    font-weight: 600;
+}
+
+.chiTiet-staff--content__link-p {
+    margin-top: .4rem;
+    font-size: 1.4rem;
+    font-weight: 500;
+}
+
+/* Trang chi tiết giảng viên end */
+/* media */
+@media (min-width:740px) and (max-width: 1023px) {
+    .news--right__para {
+        display: none;
+    }
+
+    header {
+        padding: 0 3.4rem;
+    }
+
+    .header--navbar__link {
+        margin: 0 .8rem;
+    }
+
+    .chiTiet-course-right--container__h4 {
+        margin-top: 1.6rem;
+    }
+}
+
+@media (min-width: 1024px) and (max-width: 1239px) {
+    .evaluate--col {
+        margin: 0 1.2rem;
+    }
+}
+
+
+@media (max-width: 739px) {
+    .courses {
+        width: calc(100% - 3.2rem);
+        margin: 0 auto;
+    }
+
+    .staffs--container {
+        width: calc(100% - 3.2rem);
+        margin: 0 auto;
+    }
+
+    .evaluate {
+        width: calc(100% - 6.4rem);
+        margin: 0 auto;
+    }
+
+    .evaluate-row .slick-prev,
+    .evaluate-row .slick-next {
+        display: none !important;
+    }
+
+    .evaluate--item__img {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .news--container {
+        width: calc(100% - 3.2rem);
+        margin: 0 auto;
+    }
+
+    #menu {
+        display: block;
+    }
+
+    .header--navbar {
+        position: fixed;
+        max-width: 50%;
+        min-width: 20rem;
+        width: 50%;
+        top: 6.4rem;
+        left: 0;
+        bottom: 0;
+        background-color: var(--color);
+        display: block;
+        visibility: hidden;
+        opacity: 0;
+        transform: translateX(-100%);
+        transition: all .2s ease-in;
+    }
+
+    .header--navbar.active {
+        visibility: unset;
+        opacity: 1;
+        transform: translateX(0);
+    }
+
+    .header--navbar__li {
+        margin: 1.6rem 0;
+    }
+
+    .header--navbar__link {
+        display: block;
+        text-align: center;
+        font-size: 2rem;
+        padding: .8rem;
+    }
+
+    header {
+        padding: 0 3.4rem;
+    }
+
+    .modol {
+        position: fixed;
+        background-color: var(--bg-phu);
+        top: 0;
+        right: 0;
+        left: 0;
+        bottom: 0;
+        visibility: hidden;
+        opacity: 0;
+        transition: all .2s ease-in;
+    }
+
+    .modol.activee {
+        visibility: unset;
+        opacity: 1;
+    }
+
+    .courses--phu--p {
+        display: none;
+    }
+
+    .staffs--item {
+        max-width: calc(100% - 6.4rem);
+        margin: 1.6rem auto;
+    }
+
+    .chiTiet-staff,
+    .register-course,
+    .staff-subpage--item,
+    .subpage-container {
+        max-width: calc(100% - 6.4rem);
+        margin: 1.6rem auto;
+    }
+
+    .chiTiet-staff-right {
+        border: none;
+    }
+
+    .chiTiet-course-right--container__h4 {
+        margin-top: 1.6rem;
+    }
+
+    .chiTiet-staff {
+        margin-top: 6.4rem;
+    }
+}
+
+@media (max-width:991px) {
+    html {
+        font-size: 55%;
+    }
+}
+
+@media (max-width: 400px) {
+    html {
+        font-size: 50%;
+    }
+}
